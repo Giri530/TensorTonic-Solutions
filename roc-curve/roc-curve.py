@@ -17,7 +17,7 @@ def roc_curve(y_true, y_score):
             tp += 1
         else:
             fp +=1
-        if i + 1 < len(y_score_sorted) and y_score_sorted[i] == y_score_sorted[i + 1]:
+        if i + 1 < len(y_score_sorted) and y_score_sorted[i] == y_score_sorted[i+1]:
             continue
         tprs.append(tp / P)
         fprs.append(fp / N)
