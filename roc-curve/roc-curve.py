@@ -23,5 +23,3 @@ def roc_curve(y_true, y_score):
         fprs.append(fp / N)
         thresholds.append(y_score_sorted[i])
     return np.array(fprs), np.array(tprs), np.array(thresholds)
-def compute_auc(fpr, tpr):
-    return np.trapz(tpr, fpr)
